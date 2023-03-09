@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 4</title>
+    <style>
+        body{
+            background-color: rgb(245, 245, 245);
+        }
+        h1{
+            font-size: larger;
+            text-align: left;
+        }
+        p{
+            border:double;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(0, 54, 71);
+        }
+        h2{
+            font-size: larger;
+            text-align:start;
+        }
+        h3{
+            font-size: larger;
+            text-align:justify;
+        }
+        nav ul{
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0ad4ce;
+}
+nav li{
+    float: left;
+}
+nav li a{
+    display: block;
+  color: white;
+  text-align:justify;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+nav li a:hover{
+    color: rgb(76, 77, 79);
+}
+
+/* lazy to create a new file */
+h2,h3{
+    color: rgb(203, 29, 29);
+}
+.popup {
+  max-width: 90%;
+  max-height: 90%;
+  display: none;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  position: fixed;
+  background-color: rgba(15, 183, 149, 0.9);
+  box-shadow: 0 0 5px #ccc;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.popup button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  padding: 3px 10px;
+  color:#bbb;
+  cursor: pointer;
+  background-color: rgba(240, 248, 255, 0.5);
+  border: none;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+  transition: background-color .2s;
+  -webkit-transition: background-color .2s;
+  -moz-transition: background-color .2s;
+  -ms-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.popup button:hover{
+  color: crimson;
+}
+.popup img {
+  position: relative;
+  width: 80%;
+  height: 50%;
+  margin: 20px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+      }
+  to {
+    transform: scale(1);
+    }
+}
+.clg {
+  background-color:rgb(19, 221, 221);
+  color: rgb(0, 0, 0);
+  margin: 20px;
+  padding: 20px;
+}
+    </style>
+</head>
+<body>
+    <div id="popup" class="popup">
+        <button onclick="close_ad()">&times;</button>
+        <img src="C:\Users\Asus\Downloads\kr.webp">
+      </div>
+    <img src="C:\Users\Asus\Downloads\kr.webp" width="1000px" height="100px">
+            <nav>
+                <ul>
+                  <li><a href="css.1.html">Home</a></li>
+                  <li><a href="css.2.html">AIML</a></li>
+                  <li><a href="css3.html">AIDS</a></li>
+                  <li><a href="css..4.html">Placement</a></li>
+                </ul>
+              </nav>
+              <img src="C:\Users\Asus\Downloads\kp.jpg"width="1000px" height="500px">
+    <h1>Library</h1>
+    <p>
+      
+       <h1> Karunya Institute of Technology and Sciences is an Institution with a social concern. Our mission is to raise scientists <br>and entrepreneurs to find solutions by developing products in the areas of food, water, health care and energy with the<br> best skills to solve the problems of Humanity </h>
+        
+  
+    </p>
+</div> 
+<div class="clg">
+    <h2>Vision</h2>
+    <p>To be a centre of excellence in the broad field of Artificial Intelligence by focusing knowledge-centric<br> education, innovation and cutting-edge research to address the needs of industry and society. </p>
+</div>  
+    <h2>HTML VIDEO TUTORIAL</h2>
+    <left> <iframe width="560" height="315" src="https://www.youtube.com/embed/ad79nYk2keg?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+    </left>
+<br>
+<h3>HTML AUDIO TUTORIAL</h3>
+<br>
+    <left>    <img src="https://media.tenor.com/AUlfMkS-eD8AAAAM/%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%B0.gif"height=50 width="50"><audio controls>
+        <source src="Alan Walker - Faded.mp3"type="audio/mpeg">
+    </audio></left>
+<script src="script.js"></script>
+</body>
+</html>
