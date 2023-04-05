@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script>
+        function validate()
+        {
+            var a = document.myform.name.value;
+            if(a=="")
+            {
+                alert("please, Enter your name!!!");
+                document.myform.name.focus();
+                return false;
+            }
+            if(!isNaN(a))
+            {
+                alert("please Enter only characters");
+                document.myform.name.select();
+                return false;
+            }
+
+            var d = document.myform.mail.value;
+            if(d == "")
+            {
+                alert("please, Enter your mail id!!!");
+                document.myform.mail.focus();
+                return false;
+            }
+            var atposition = d.indexOf("@");
+            var dotposition = d.lastIndexOf(".");
+            if(atposition<1 || dotposition<atposition+2 || dotposition+2>=d.length)
+                {
+                    alert("please enter valid mail address!!!!");
+                return false; }
+
+            var p = document.myform.pass.value;
+            if(p == "")
+            {
+                alert("please, Enter your password!!!");
+                document.myform.pass.focus();
+                return false;
+            }
+            var cp = document.myform.cpass.value;
+            if(cp == "")
+            {
+                alert("please, Enter your password!!!");
+                document.myform.cpass.focus();
+                return false;
+            }
+            if(p != cp)
+            {
+                alert("Password not matched please enter correct one!!!!");
+                document.myform.cpass.focus();
+                return false;
+            }
+
+            var m = document.myform.mno.value;
+            if(m =="")
+            {
+                alert("please, Enter your moblie number!!!");
+                document.myform.mno.focus();
+                return false;
+            }
+            else if(m.length<10 || m.length>10)
+                {
+                    alert("please enter only 10 digits!");
+                    document.myform.mno.focus();
+                    return false;
+                }
+
+            var rb = document.myform.gender;
+            var status =0;
+            for(var i=0;i<rb.length;i++)
+            {
+                if(rb[i].checked==true){
+                    status=1;
+                }
+            }
+            if(status==0)
+            {
+                alert("select gender");
+                return false;
+            }
+
+            var interest = document.myform.course;
+            if(interest.selectedIndex==0)
+            {
+                alert("select your course");
+                document.myform.course.focus();
+                return false;
+            }
+
+           
+            return true;
+        }
+    </script>
+
+
+
+
+
+    <title>validate</title>
+</head>
+<body style="background-color: rgb(167, 242, 192);">
+    <div class="container">
+    <form action="action.html" name="myform" onsubmit="return validate()">
+
+        <div class="item">
+            <label for="Username">Username:</label>
+            <input type="text" id="name" name="name">
+        </div> <br>
+        <div class="item">
+            <label for="Mailid">Mail-ID:</label>
+            <input type="text" id="mail" name="mail">
+        </div> <br>
+        <div class="item">
+            <label for="password">Password:</label>
+            <input type="text" id="pw" name="pass">
+        </div> <br>
+        <div class="item">
+            <label for="cpassword">Confirm Password:</label>
+            <input type="text" id="cpw" name="cpass">
+        </div> <br>
+        <div class="item">
+            <label for="mno">Mobile number:</label>
+            <input type="text" id="mno" name="mno">
+        </div> <br>
+        <div class="item">
+            <label for="gender">Gender:</label> <br>
+            <input type="radio" id="gender" name="gender">
+            <label for="male">Male</label> <br>
+            <input type="radio" id="gender" name="gender">
+            <label for="female">Female</label> <br>
+            <input type="radio" id="gender" name="gender">
+            <label for="others">Others</label> <br>
+        </div> <br>
+        <div class="item">
+            <label for="course">Select course:</label> <br>
+            <select type="text" name="course" id="course"> 
+                <option></option>
+                <option value="WEB TECHNOLOGY">WEB TECHNOLOGY</option>
+                <option value="Operating system">Operating system</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="Optimization Techniques">Optimization Techniques</option>
+                <option value="Computer Organisation">Computer Organisation</option>
+            </select>
+        </div> <br>
+
+<div class="item">
+    <input type="submit" id="sub" name="sub">
+</div> <br>
+</form>
+
+</div>
+</body>
+</html>
